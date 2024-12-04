@@ -4,7 +4,7 @@ import os
 
 import pandas as pd  # type: ignore
 
-from _solution.country_scientific_production import make_worldmap
+from homework.country_scientific_production import make_worldmap
 
 
 def test_01():
@@ -28,5 +28,5 @@ def test_01():
     assert dataframe["count"]["United Kingdom"] == 173
     assert dataframe["count"]["Italy"] == 112
 
-    if not os.path.exists("files/map.html"):
+    if not os.path.exists("files/output/map.html"):
         raise FileNotFoundError("File 'files/output/map.html' not found")
